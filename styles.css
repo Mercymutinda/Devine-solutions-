@@ -1,19 +1,21 @@
-h1{
-    color: #4c3d81;
+.heading{
+    color: #102656;
    font-size: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Abril Serif Typeface;
     text-align: center;
 
+    
+
 }
-ul{
+.nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #4c3d81;
+    background-color:#102656;
   }
   
-  li {
+  .navbar {
     padding: 14px 16px;
     display: inline-block;
   color: white;
@@ -30,7 +32,7 @@ ul{
 h2{
     font-size: 40px;
     text-align: center;
-    color: #4c3d81;
+    color: #102656;
 }
 
 
@@ -38,17 +40,19 @@ img{
     width:100%;
     height:auto;
 }
-.container {
-    position: relative;
-    
-    margin:inherit;
-  }
-  
-  .container img {
-    vertical-align: middle;
-    width: 100%;
+.image-row {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 10px; /* Adds space between images */
 }
-  
+
+.image-row img {
+    width: 500px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+  }
   .container .content {
     position: absolute;
     bottom: 0;
@@ -60,42 +64,6 @@ img{
     
   }
  
- 
-   /* Slideshow container */
-   .slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-}
-
-/* Hide all images by default */
-.slides {
-    display: none;
-    width: 100%;
-    height: auto;
-}
-
-/* Next and previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    
-}
-
-/* Position next button on the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
 
 /* Caption text */
 .caption {
@@ -197,4 +165,50 @@ img{
 section{
     margin-top: auto;
     margin-bottom: 100px;
+}
+footer{
+    text-align: center;
+    color:#4c3d81;
+}
+/*
+.services{
+    padding: 14px 16px;
+    display: inline-block;
+  
+  text-align: center;
+  font-size: 30px;
+  margin:auto;
+  text-decoration: underline;
+  }
+  */
+
+.wifi{
+    color:black;
+    text-decoration:none;
+
+}
+.slide{
+    height:330px;
+    width:247px;
+    display:block;
+}
+.row{
+    flex-shrink: 0;
+    width:100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.services{
+    box-sizing: border-box;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--bs--gutter-x)*5);
+}
+h3{
+    text-align: center;
 }
