@@ -1,3 +1,4 @@
+/*heading*/
 .heading{
     color: #102656;
    font-size: 100px;
@@ -7,12 +8,16 @@
     
 
 }
+/* navigation bar*/
 .nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow:hidden;
     background-color:#102656;
+    display:flex;
+    justify-content: flex-end; /* Push items to the right */
+    
   }
   
   .navbar {
@@ -22,20 +27,24 @@
   text-align: center;
   text-decoration: none;
   font-size: 30px;
-  
+   margin-left: 1rem; /* Space between items */
 }
-  
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color:#390ddb;
+  border-radius: 5px;
+}
   p{
     font-size: 30px;
   }
 
-h2{
-    font-size: 40px;
-    text-align: center;
-    color: #102656;
-}
-
-
+/*home page images*/
 img{
     width:100%;
     height:auto;
@@ -51,56 +60,74 @@ img{
     height: auto; /* Maintains aspect ratio */
     border-radius: 8px; /* Optional: Rounded corners */
 }
-
-  }
-  .container .content {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
+/*services page*/
+.services{
+  align-items: center; /* Center-align title */
+  padding: 2rem;
+}
+.services h2{  
+       color:#102656;
+        font-size: 4rem; /* Adjust title size */
+        margin-bottom: 1rem; /* Space below the title */
+        text-align: center;
+}
+.theservicesoffered{
+    flex: 1; /* Each item takes equal width */
+  max-width: 30%; /* Optional: Limit max width of each service */
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for style */
+  text-align: center; /* Center-align text */
+}
+.service-container{
     
-  }
- 
-
-/* Caption text */
-.caption {
-    color: #f2f2f2;
-    font-size: 20px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  gap: 1rem; /* Add spacing between items */
+  padding: 1rem; /* Optional padding */
+  flex-wrap: wrap;
+}
+.services div {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap services on smaller screens */
     width: 100%;
+  }
+
+  /*about*/
+  .about {
+        color:#102656;
+        font-size: 4rem; /* Adjust title size */
+        margin-bottom: 1rem; /* Space below the title */
+        text-align: center;
+  }
+  .welcome {
+    padding: 2rem;
+    background-color: #f5f5f5; /* Light background for contrast */
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+  }
+  
+  .welcome h2 {
+    font-size: 2.5rem;
+    color:#102656; /* Main heading color */
+    margin-bottom: 1rem;
+  }
+  
+  .welcome p {
+    
+    line-height: 1.8; /* Improves readability */
+    margin-bottom: 1rem;
+  }
 
-/* Dots for navigation */
-.dot-container {
+
+/*contacts*/
+
+.contacts{
+    color:#102656;
+    font-size: 4rem; /* Adjust title size */
+    margin-bottom: 1rem; /* Space below the title */
     text-align: center;
-    padding: 10px;
-    background: #ddd;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color:#4c3d81;
-}
-.slides img {
-    width: 100%; /* or specify a pixel width, e.g., width: 500px; */
-    height: auto;
 }
 .contact-grid {
     display: grid;
@@ -122,19 +149,19 @@ img{
 
 .contact-item i {
     font-size: 2em;
-    color: #4c3d81;
     margin-bottom: 10px;
 }
 
 .contact-item h3 {
     margin: 10px 0 5px;
-    font-size: 1.2em;
+    font-size: 30px;
     color: #333;
 }
 
 .contact-item p {
     font-size: 1em;
-    color: #666;
+    color:black;
+    font-size: 30px;
 }
 
 /* Optional: Adjust grid layout for smaller screens */
@@ -143,72 +170,21 @@ img{
         grid-template-columns: 1fr; /* Switch to 1 column on small screens */
     }
 }
-
-.about-container {
-    display: flex; /* Use flexbox to arrange items side by side */
-    align-items: flex-start; /* Align items at the start (top) */
-    gap: 20px; /* Space between image and text */
-    margin-top: 20px; /* Space above the about section */
-}
-
-.about-image {
-    width: 300px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: add rounded corners */
-}
-
-.about-container p {
-    text-align: left; /* Ensure text is left-aligned */
-    margin: 0; /* Remove default margins to prevent extra spacing */
-}
-
+@media (max-width: 768px) {
+    .services {
+      flex-direction: column; /* Stack services vertically */
+    }
+  
+    .theservicesoffered{
+      max-width: 100%; /* Full width for each service */
+    }
+  }
 section{
     margin-top: auto;
     margin-bottom: 100px;
 }
 footer{
     text-align: center;
-    color:#4c3d81;
-}
-/*
-.services{
-    padding: 14px 16px;
-    display: inline-block;
-  
-  text-align: center;
-  font-size: 30px;
-  margin:auto;
-  text-decoration: underline;
-  }
-  */
-
-.wifi{
-    color:black;
-    text-decoration:none;
-
-}
-.slide{
-    height:330px;
-    width:247px;
-    display:block;
-}
-.row{
-    flex-shrink: 0;
-    width:100%;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-.services{
-    box-sizing: border-box;
-    width:100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: calc(var(--bs--gutter-x)*5);
-}
-h3{
-    text-align: center;
+    color:#102656;
+    font-size: 20px;
 }

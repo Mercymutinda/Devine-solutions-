@@ -18,15 +18,15 @@
      <!--  navigation bar -->
      <nav>
         <ul class="nav"> 
-            <li class="navbar">HOME</li>
-            <li class="navbar">SERVICES</li>
-            <li class="navbar">ABOUT</li>
-            <li class="navbar">CONTACTS</li>
+            <li class="navbar"><a href="#homepage">HOME</a></li>
+            <li class="navbar"><a href="#servicespage">SERVICES</a></li>
+            <li  class="navbar"><a href="#aboutpage">ABOUT</a></li>
+            <li  class="navbar"><a href="#contactspage">CONTACTS</a></li>
         </ul>
      </nav>
 
      <!--Home page.The image should be blurred out or multiple images should be insterted horizontally. -->
-     <div>
+     <div id="homepage">
         <div class="image-row">
                 <img src="images/slide1.webp" alt="Image 1">
                 <img src="images/slide2.webp" alt="Image 2">
@@ -38,38 +38,38 @@
         </div>
           
      </div>
-<!-- The services insert a few images. probably small in size. each should have a detailed explanation of the service been offered.-->
-     <div class="services">
-        <div class="row">
+
+     <section  id="servicespage" class="services">
+    
          <h2>SERVICES</h2>
-            <div>
+        <div class="service-container">
+            <div class="theservicesoffered">
                 <h3>SCREEN AND PHONE REPAIR</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nisi molestias ipsa eligendi consequatur, enim eius assumenda tempora impedit mollitia quasi, adipisci voluptates minus ipsam atque. Numquam quidem saepe fuga!</p>
             </div>
-            <div>
+            <div class="theservicesoffered">
                 <h3>COMPUTER MAINTENANCE</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat error libero, possimus iste omnis molestias dolores, similique neque ad totam et accusamus atque aut eius? Porro, labore velit? Dicta!</p>
             </div>
-            <div>
+            <div class="theservicesoffered">
                 <h3>WIFI AND WIFI INSTALLATION</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga odio unde illo corrupti, et omnis ex voluptates odit repudiandae adipisci nostrum magni dolores soluta, explicabo ab quaerat ea dolor deleniti!</p>
             </div>
         </div>
-     </div>
-    <section>
-        <h2> ABOUT.</h2>
-        
-     
-            <div class="about-container">
-               
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugiat nisi recusandae temporibus amet natus rem ducimus inventore aspernatur tempore, molestiae ipsam magni cupiditate sint. Iure necessitatibus exercitationem repudiandae commodi.</p>
-            </div>
-        
-        
-    </section>
+     </section >
+     <section id="aboutpage">
+     <h1 class="about">About Us</h1>
+     <section class="welcome">
+        <h2>Welcome to Devine Solutions.</h2>
+        <p>Your trusted partner for all things tech!</p>
+        <p>
+          With years of experience in the tech repair and management industry, we pride ourselves on providing top-notch solutions for your devices and connectivity needs. From reliable phone repairs to expert computer management, and seamless WiFi services, we are here to keep your digital life running smoothly.
+        </p>
+      </section>
+     </section>    
     
-    <section>
-        <h2>CONTACTS</h2>
+    <section id="contactspage">
+        <h1 class="contacts">CONTACTS</h1>
         <div class="contact-grid">
             <div class="contact-item">
                 <i class="fas fa-phone"></i>
