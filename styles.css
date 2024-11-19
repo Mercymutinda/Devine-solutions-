@@ -1,29 +1,46 @@
 /*heading*/
-.heading{
-    color: #102656;
-   font-size: 100px;
-    font-family:Abril Serif Typeface;
-    text-align: center;
-
-    
+header {
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: auto; /* Allow the header to take only as much space as needed */
+  padding:  0 0 20px 0; /* Optional: Add space at the bottom */
+  position: relative; /* Positioning for background */
+  z-index: 1; /* Ensure the heading is above the background */
 
 }
+    .heading {
+      color: #102656; /* Heading text color */
+      font-size: 8rem; /* Increase font size */
+      font-weight: bold; /* Optional: Make the text bold */
+      text-align: center; /* Center the text */
+      border: 3px solid #102656; /* Wider border */
+      border-radius: 30px; /* Make the corners more rounded */
+      padding: 20px 10px;  /* Space between the text and the border */
+      display: inline-block; /* Shrink the border to fit around the text */
+      background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background inside the border */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a 3D effect */
+      z-index: 2; /* Ensure the heading is above the background */
+      margin-bottom: 10px;
+  }
+  
+
 /* navigation bar*/
 .nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow:hidden;
-    background-color:#102656;
+    background-color:white;
     display:flex;
-    justify-content: flex-end; /* Push items to the right */
+    justify-content:flex-start; /* Push items to the right */
     
   }
   
   .navbar {
     padding: 14px 16px;
     display: inline-block;
-  color: white;
+  color: #102656;
   text-align: center;
   text-decoration: none;
   font-size: 30px;
@@ -31,7 +48,7 @@
 }
 nav a {
   text-decoration: none;
-  color: white;
+  color: #102656;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
 }
@@ -43,7 +60,34 @@ nav a:hover {
   p{
     font-size: 30px;
   }
+  .homep{
+    
+      /* Adding the background image */
+      background-image: url('images/backgroundimage.png');
+      /* Ensuring the background covers the entire screen */
+      background-size: cover;
+      /* Making the background image fixed while scrolling */
+      background-attachment:fixed;
+      /* Centering the background image */
+      background-position: center;
+      /* Prevents repeating the background image */
+      background-repeat: no-repeat;
+      height: 100vh; /* Ensures the body takes up the full screen height */
+      margin: 0;
+      display: grid; /* Enable Grid layout */
+      place-items: center; /* Center content horizontally and vertically */
+    
+  }
+  .homecontent {
+    text-align:center;
+font-size: 1.8rem;
+line-height: 1.8;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.1); /* Adds a semi-transparent overlay for better readability */
+    height: 100vh; /* Ensures the body takes up the full screen height */
+    margin: auto;
 
+  }
 /*home page images*/
 img{
     width:100%;
@@ -67,7 +111,7 @@ img{
 }
 .services h2{  
        color:#102656;
-        font-size: 4rem; /* Adjust title size */
+        font-size: 3rem; /* Adjust title size */
         margin-bottom: 1rem; /* Space below the title */
         text-align: center;
 }
@@ -93,11 +137,16 @@ img{
     flex-wrap: wrap; /* Wrap services on smaller screens */
     width: 100%;
   }
+  .theservicesoffered p{
+    font-size:24px ;
+    text-align: left;
+    margin-top:2px;
+  }
 
   /*about*/
   .about {
         color:#102656;
-        font-size: 4rem; /* Adjust title size */
+        font-size: 3rem; /* Adjust title size */
         margin-bottom: 1rem; /* Space below the title */
         text-align: center;
   }
@@ -118,6 +167,7 @@ img{
     
     line-height: 1.8; /* Improves readability */
     margin-bottom: 1rem;
+    font-size: 24px;
   }
 
 
@@ -125,7 +175,7 @@ img{
 
 .contacts{
     color:#102656;
-    font-size: 4rem; /* Adjust title size */
+    font-size: 3rem; /* Adjust title size */
     margin-bottom: 1rem; /* Space below the title */
     text-align: center;
 }
@@ -154,14 +204,14 @@ img{
 
 .contact-item h3 {
     margin: 10px 0 5px;
-    font-size: 30px;
+    font-size: 20px;
     color: #333;
 }
 
 .contact-item p {
     font-size: 1em;
     color:black;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 /* Optional: Adjust grid layout for smaller screens */
