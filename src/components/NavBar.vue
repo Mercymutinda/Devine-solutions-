@@ -1,38 +1,61 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
+
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container d-flex justify-content-between">
+    <!-- NavBar -->
+    <nav class="navBar  d-flex align-items-center justify-content-between px-4 py-2 w-100">
       
-      <!-- Left Section: Devine Solutions -->
-      <a class="navbar-brand fw-bold" href="#">Devine Solutions</a>
-
-      <!-- Navbar Toggler (for mobile) -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Right Section: Navigation Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto"> <!-- Moves this section to the right -->
-          <li class="nav-item">
-            <router-link to="/" class="nav-link">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/about" class="nav-link">About</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/services" class="nav-link">Services</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/contacts" class="nav-link">Contacts</router-link>
-          </li>
-        </ul>
+      <!-- Logo & Business Name -->
+      <div class="d-flex align-items-center">
+        <img src="/public/wifi.avif" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;" />
+        <h5 class="text-white m-0">Devine Solutions</h5>
       </div>
 
-    </div>
-  </nav>
+      <!-- Nav Links -->
+      <ul class="nav m-0">
+        <li class="nav-item">
+          <RouterLink class="nav-link text-white " to="/">Home</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link text-white" to="/services">Services</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link text-white" to="/about">About</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link text-white " to="/contacts">Contact</RouterLink>
+        </li>
+      </ul>
+    </nav>
 </template>
+
+<style scoped>
+.navBar {
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: #061323;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+}
+</style>

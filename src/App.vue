@@ -1,13 +1,18 @@
 <script setup>
+import NavBar from './components/NavBar.vue';
+import FooterComponent  from './components/FooterComponent.vue';
 </script>
 
 <template>
- <RouterView />
-  
+<div  >
+    <NavBar/>
+
+<RouterView />
+
+<FooterComponent/>
+</div>
 </template>
 
 <style>
-@import "@/assets/scss/main";
-
 
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <div class="full-bg">
 <section class="about-us">
   <div class="about">
     <img src="/public/phone2.avif" class="pic" />
@@ -16,6 +17,7 @@
   </div>
 
 </section>
+</div>
 
 </template>
 
@@ -38,14 +40,14 @@
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 90px 0;
   background: hsla(201, 78%, 66%, 0.3); /* Lighter & transparent */
   ;
 }
 .pic{
   height: auto;
-  width: 400px;
+  width: 800px;
   border-radius: 12px;
+  margin-right: 50px;
 }
 .about{
   width:1130px;
@@ -53,10 +55,11 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .text{
   width:540px;
+  margin-left: 50px;
 }
 .text h2{
   color: #333;
@@ -94,5 +97,15 @@ span{
 }
 .hire:hover{
   background: #000;
+}
+
+
+.full-bg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 </style>
